@@ -67,6 +67,7 @@
     </ApplicationDefinition>
     <Compile Include="Calculations\Calculation.cs" />
     <Compile Include="Validations\Validation.cs" />
+    <Compile Include="ViewModels\AddEmployeeViewModel.cs" />
     <Compile Include="ViewModels\AddReportViewModel.cs" />
     <Compile Include="ViewModels\AdminViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
