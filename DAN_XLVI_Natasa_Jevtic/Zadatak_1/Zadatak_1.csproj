@@ -94,6 +94,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Data_Records_Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Logger.cs" />
+    <Compile Include="Models\Managers.cs" />
+    <Compile Include="Models\Reports.cs" />
     <Compile Include="Models\tblEmployee.cs">
       <DependentUpon>Data_Records_Model.tt</DependentUpon>
     </Compile>
