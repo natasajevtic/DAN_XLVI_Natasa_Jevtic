@@ -111,7 +111,21 @@ namespace Zadatak_1.Validations
             {
                 return true;
             }
+        }
 
+        public bool ValidationForEditReportsNumberPerDay(int employeeID, DateTime date)
+        {
+            Reports reports = new Reports();
+            List<vwReport> reportList = reports.GetReports();
+            List<vwReport> reportsOfEmployee = reportList.Where(x => x.EmployeeID == employeeID && x.Date == date).ToList();
+            if (reportsOfEmployee.Count() > 2)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public bool ValidationForHours(int employeeID, int reportID, DateTime date, int hours)

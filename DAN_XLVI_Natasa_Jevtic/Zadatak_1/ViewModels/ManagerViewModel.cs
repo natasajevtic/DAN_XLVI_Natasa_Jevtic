@@ -498,7 +498,7 @@ namespace Zadatak_1.ViewModels
         {
             try
             {
-                EditReportView editReportView = new EditReportView();
+                EditReportView editReportView = new EditReportView(Report);
                 editReportView.ShowDialog();
                 //invokes method to update a list of reports
                 ReportList = reports.GetReports();
