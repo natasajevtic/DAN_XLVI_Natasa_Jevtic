@@ -270,21 +270,7 @@ namespace Zadatak_1.ViewModels
                 viewButtonEditReport = value;
                 OnPropertyChanged("ViewButtonEditReport");
             }
-        }
-
-        private Visibility viewButtonAllReports;
-        public Visibility ViewButtonAllReports
-        {
-            get
-            {
-                return viewButtonAllReports;
-            }
-            set
-            {
-                viewButtonAllReports = value;
-                OnPropertyChanged("ViewButtonAllReports");
-            }
-        }
+        }        
 
         private ICommand viewAllReports;
 
@@ -343,9 +329,6 @@ namespace Zadatak_1.ViewModels
                 ViewButtonAddEmployee = Visibility.Hidden;
                 ViewButtonDeleteEmployee = Visibility.Hidden;
                 ViewButtonEditEmployee = Visibility.Hidden;
-                ViewButtonAllReports = Visibility.Hidden;
-                ViewButtonDeleteReport = Visibility.Collapsed;
-                ViewButtonEditReport = Visibility.Collapsed;
             }
             if (manager.Sector == "FINANCIAL")
             {

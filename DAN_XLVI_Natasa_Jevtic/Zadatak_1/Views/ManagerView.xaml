@@ -35,7 +35,7 @@
         <Button Grid.Column="7" Grid.Row="1" Content="View employee" Command="{Binding ViewEmployee}"/>
         <Button Grid.Column="9" Grid.Row="1" Content="Add employee" Command="{Binding AddEmployee}" Visibility="{Binding ViewButtonAddEmployee, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Button Grid.Column="1" Grid.Row="3" Content="View reports" Command="{Binding ViewAllReports}" Visibility="{Binding ViewButtonAllReports, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="View reports" Command="{Binding ViewAllReports}"/>
 
         <Grid Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="9" Visibility="{Binding IsVisibleEmployeeData, UpdateSourceTrigger=PropertyChanged}">
             <DataGrid ItemsSource="{Binding EmployeeList,UpdateSourceTrigger=PropertyChanged}"
