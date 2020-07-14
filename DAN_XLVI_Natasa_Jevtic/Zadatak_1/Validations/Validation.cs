@@ -128,5 +128,97 @@ namespace Zadatak_1.Validations
                 return true;
             }
         }
+
+        public bool UniqueJMBG(string jmbg, string oldJmbg)
+        {
+            Employees employees = new Employees();
+            List<tblEmployee> employeeList = employees.GetAllEmployees();
+            if (jmbg != oldJmbg)
+            {
+                var list = employeeList.Where(x => x.JMBG == jmbg).ToList();
+                //if exists employee with forwarded jmbg, return false
+                if (list.Count() > 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool UniqueBankAccount(string bankAccount, string oldBankAccount)
+        {
+            Employees employees = new Employees();
+            List<tblEmployee> employeeList = employees.GetAllEmployees();
+            if (bankAccount!=oldBankAccount)
+            {
+                var list = employeeList.Where(x => x.BankAccountNumber == bankAccount).ToList();
+                //if exists employee with forwarded bank account, return false
+                if (list.Count() > 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool UniqueUsername(string username, string oldUsername)
+        {
+            Employees employees = new Employees();
+            List<tblEmployee> employeeList = employees.GetAllEmployees();
+            if (username != oldUsername)
+            {
+                var list = employeeList.Where(x => x.Username == username).ToList();
+                //if exists employee with forwarded username, return false
+                if (list.Count() > 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool UniqueEmail(string email, string oldEmail)
+        {
+            Employees employees = new Employees();
+            List<tblEmployee> employeeList = employees.GetAllEmployees();
+            if (email != oldEmail)
+            {
+                var list = employeeList.Where(x => x.Email == email).ToList();
+                //if exists employee with forwarded email, return false
+                if (list.Count() > 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
