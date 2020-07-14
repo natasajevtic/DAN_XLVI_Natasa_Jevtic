@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadatak_1.Views"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Add report" MinHeight="200" MinWidth="300" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
@@ -29,7 +30,8 @@
         <Label Grid.Column="1" Grid.Row="3" Content="Project:"/>
         <Label Grid.Column="1" Grid.Row="5" Content="Hours:"/>
 
-        <DatePicker Grid.Column="3" Grid.Row="1" Text="{Binding Report.Date}" MinWidth="120"/>
+        <DatePicker Grid.Column="3" Grid.Row="1" SelectedDate="{Binding Path=Report.Date,
+        Mode=TwoWay, TargetNullValue={x:Static System:DateTime.Now}}" MinWidth="120"/>
         <TextBox Grid.Column="3" Grid.Row="3" Text="{Binding Report.Project}"/>
         <TextBox Grid.Column="3" Grid.Row="5" Text="{Binding Report.Hours}"/>
 

@@ -29,7 +29,7 @@
         <Label Grid.Column="1" Grid.Row="3" Content="Project:"/>
         <Label Grid.Column="1" Grid.Row="5" Content="Hours:"/>
 
-        <DatePicker Grid.Column="3" Grid.Row="1" Text="{Binding Report.Date, UpdateSourceTrigger=PropertyChanged}" MinWidth="120"/>
+        <DatePicker Grid.Column="3" Grid.Row="1" SelectedDate="{Binding Path=Report.Date, UpdateSourceTrigger=PropertyChanged}" MinWidth="120"/>
         <TextBox Grid.Column="3" Grid.Row="3" Text="{Binding Report.Project, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Grid.Column="3" Grid.Row="5" Text="{Binding Report.Hours, UpdateSourceTrigger=PropertyChanged}"/>
 
